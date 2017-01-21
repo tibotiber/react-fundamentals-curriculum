@@ -14,7 +14,7 @@ const CityPicker = (props) => {
         className='btn btn-success'
         style={{margin: '10px'}}
         onClick={props.onCitySelected}>
-          {props.btnText}
+        {props.btnText}
       </button>
     </div>
   )

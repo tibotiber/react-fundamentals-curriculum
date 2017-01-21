@@ -17,8 +17,8 @@ const Main = (props) => {
       <Header className="header">
         <Link to='/' style={{decoration: 'none', color: 'white'}}>
           <h2 style={Object.assign({}, styles.thinFont, noMargin)}>Weather App</h2>
-       </Link>
-      <CityPickerContainer placeholder='Singapore' btnText='Get Weather' style={styles.flexRow} />
+        </Link>
+        <CityPickerContainer placeholder='Singapore' btnText='Get Weather' style={styles.flexRow} />
       </Header>
       <div className="main" style={fullHeight}>
         {props.children}

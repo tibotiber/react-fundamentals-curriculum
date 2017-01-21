@@ -13,7 +13,7 @@ const Home = (props) => {
   return (
     <div style={Object.assign({}, patternedBackground, styles.flexColumn)}>
       <h1 style={Object.assign({}, styles.thinFont, styles.white)}>Choose a city</h1>
-    <CityPickerContainer placeholder='Singapore' btnText='Get Weather' style={styles.flexColumn} />
+      <CityPickerContainer placeholder='Singapore' btnText='Get Weather' style={styles.flexColumn} />
     </div>
   )
 }
