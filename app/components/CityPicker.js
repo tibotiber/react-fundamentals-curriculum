@@ -9,7 +9,8 @@ const CityPicker = (props) => {
         placeholder={props.placeholder}
         style={{maxWidth: '300px'}}
         onChange={props.onUpdateCity}
-        value={props.city} />
+        value={props.city}
+        onKeyPress={props.onKeyPress} />
       <button
         className='btn btn-success'
         style={{margin: '10px'}}

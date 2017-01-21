@@ -21,6 +21,11 @@ const CityPickerContainer = React.createClass({
       city: ''
     })
   },
+  handleKeyPress (e) {
+    if (e.key === 'Enter') {
+      this.handleCitySelected(e);
+    }
+  },
   render () {
     return (
       <CityPicker
@@ -29,6 +34,7 @@ const CityPickerContainer = React.createClass({
         style={this.props.style}
         onCitySelected={this.handleCitySelected}
         onUpdateCity={this.handleUpdateCity}
+        onKeyPress={this.handleKeyPress}
         city={this.state.city} />
     )
   }
