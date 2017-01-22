@@ -6,7 +6,7 @@ const ForecastContainer = React.createClass({
   getInitialState () {
     return {
       isLoading: true,
-      weather: {},
+      forecast: [],
       city: this.props.routeParams.city
     }
   },
@@ -17,7 +17,7 @@ const ForecastContainer = React.createClass({
     if (this.props.routeParams.city !== newProps.routeParams.city) {
       this.setState({
         isLoading: true,
-        weather: {},
+        forecast: [],
         city: newProps.routeParams.city
       })
       this.fetchWeather(newProps.routeParams.city)
@@ -28,14 +28,14 @@ const ForecastContainer = React.createClass({
       .then((weather) => {
         this.setState({
           isLoading: false,
-          weather: weather,
-          city: weather.data.city.name + ', ' + weather.data.city.country
+          forecast: weather.forecast,
+          city: weather.city.name + ', ' + weather.city.country
         })
       })
   },
   render () {
     return (
-      <Forecast city={this.state.city} isLoading={this.state.isLoading} weather={this.state.weather} />
+      <Forecast requestedCity={this.props.routeParams.city} city={this.state.city} isLoading={this.state.isLoading} forecast={this.state.forecast} />
     )
   }
 })
